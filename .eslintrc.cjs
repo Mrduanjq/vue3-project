@@ -15,7 +15,6 @@ module.exports = {
     'plugin:vue/vue3-essential',
     // 'standard-with-typescript',
     'plugin:@typescript-eslint/recommended',
-    'prettier'
   ],
   globals: {
     AMap: false,
