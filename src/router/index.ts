@@ -4,7 +4,7 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: () => import('@/pages/home/index.vue')
+    component: async () => await import('@/pages/home/index.vue')
   }
 ]
 

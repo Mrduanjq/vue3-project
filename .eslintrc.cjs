@@ -6,13 +6,16 @@ module.exports = {
   },
   parser: 'vue-eslint-parser',
   parserOptions: {
+    ecmaVersion: 13,
     parser: '@typescript-eslint/parser',
-    ecmaVersion: 'latest',
     sourceType: 'module'
   },
   extends: [
+    'eslint:recommended',
     'plugin:vue/vue3-essential',
-    'standard-with-typescript'
+    // 'standard-with-typescript',
+    'plugin:@typescript-eslint/recommended',
+    'prettier'
   ],
   globals: {
     AMap: false,
@@ -21,9 +24,13 @@ module.exports = {
   overrides: [
   ],
   plugins: [
-    'vue'
+    'vue',
+    '@typescript-eslint',
+    'prettier'
   ],
   rules: {
+    'semi': [2, 'never'],
+    '@typescript-eslint/triple-slash-reference': 'off',
     '@typescript-eslint/ban-ts-ignore': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
